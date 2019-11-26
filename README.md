@@ -49,6 +49,10 @@
 能够保证所有路径之和最小(结果和目的相同)
 最小生成树不唯一，可能多样的
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20191126161513925.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly96aGFuZ3ZhbHVlLmJsb2cuY3Nkbi5uZXQ=,size_16,color_FFFFFF,t_70)
+## 程序结果
+根据上图中提供的例子发现prim和kruskal算法最终的结果都是连接距离为28
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20191126163016415.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly96aGFuZ3ZhbHVlLmJsb2cuY3Nkbi5uZXQ=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20191126163054839.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly96aGFuZ3ZhbHVlLmJsb2cuY3Nkbi5uZXQ=,size_16,color_FFFFFF,t_70)
 ## 总结
 最小生成树算法理解起来也相对简单，实现起来也不是很难。Kruskal和Prim主要是贪心算法的两种角度。
 一个从整体开始找最小边，遇到关联不断合并，
