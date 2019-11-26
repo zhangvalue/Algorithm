@@ -30,6 +30,7 @@
 3、如果联通，跳过，如果不连通，则使用union（并查集合并）将两个顶点合并。这条边被使用(可以储存或者计算数值)。
 4、重复2，3操作直到集合（优先队列）q1为空。此时被选择的边构成最小生成树。
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20191126161337359.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly96aGFuZ3ZhbHVlLmJsb2cuY3Nkbi5uZXQ=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20191126162702681.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly96aGFuZ3ZhbHVlLmJsb2cuY3Nkbi5uZXQ=,size_16,color_FFFFFF,t_70)
 ## Prim算法
 除了Kruskal算法以外，普里姆算法（Prim算法）也是常用的最小生成树算法。虽然在效率上差不多。但是贪心的方式和Kruskal完全不同。prim算法的核心信仰是：从已知扩散寻找最小。它的实现方式和Dijkstra算法相似但稍微有所区别，Dijkstra是求单源最短路径。而每计算一个点需要对这个点从新更新距离。而prim甚至不用更新距离。直接找已知点的邻边最小加入即可！
 
@@ -39,6 +40,7 @@
 从集合q1找到距离最小的那个边v1并判断边另一点p是否被标记(访问)，如果p被标记说明已经确定那么跳过，如果未被标(访问)记那么标记该点p,并且与p相连的未知点(未被标记)构成的边加入集合q1，边v1(可以进行计算距离之类，该边构成最小生成树) .
 重复1，2直到q1为空，构成最小生成树 ！
 大体步骤图解为：![在这里插入图片描述](https://img-blog.csdnimg.cn/20191126161421982.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly96aGFuZ3ZhbHVlLmJsb2cuY3Nkbi5uZXQ=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20191126162650197.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly96aGFuZ3ZhbHVlLmJsb2cuY3Nkbi5uZXQ=,size_16,color_FFFFFF,t_70)
 因为prim从开始到结束一直是一个整体在扩散，所以不需要考虑两棵树合并的问题，在这一点实现上稍微方便了一点。
 
 当然，要注意的是最小生成树并不唯一，甚至同一种算法生成的最小生成树都可能有所不同，但是相同的是无论生成怎样的最小生成树：
@@ -51,5 +53,4 @@
 最小生成树算法理解起来也相对简单，实现起来也不是很难。Kruskal和Prim主要是贪心算法的两种角度。
 一个从整体开始找最小边，遇到关联不断合并，
 另一个从局部开始扩散找身边的最小不断扩散直到生成最小生成树。在学习最小生成树之前最好学习一下dijkstra算法和并查集。
-
 
