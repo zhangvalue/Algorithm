@@ -8,9 +8,6 @@ import java.util.Comparator;
 import java.util.PriorityQueue;
 import java.util.Queue;
 
-/*
- * 作者：bigsai(公众号)
- */
 public class kruskal {
 
     static int tree[]=new int[10];//bing查集
